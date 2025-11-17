@@ -1,5 +1,9 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = var.bucket_name
+  bucket = "terraform-state-bucket-goitis"
 
   tags = {
     Name        = "Terraform State Bucket"
@@ -21,3 +25,4 @@ resource "aws_s3_bucket_ownership_controls" "terraform_state_ownership" {
     object_ownership = "BucketOwnerEnforced"
   }
 }
+
