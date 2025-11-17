@@ -1,7 +1,15 @@
-## Set AWS profile
+## Set up
+
+Set AWS profile
 
 ```bash
 export AWS_PROFILE=
+```
+
+Move to project dir
+
+```bash
+cd lesson-5
 ```
 
 ---
@@ -35,4 +43,32 @@ Return back to root terraform project folder
 
 ```bash
 cd ..
+```
+
+---
+
+## Manage project
+
+Initialize project (make sure you are in the lesson-5)
+
+```bash
+terraform init
+```
+
+Check planned changes
+
+```bash
+terraform plan
+```
+
+Apply changes to create bucket
+
+```bash
+terraform apply
+```
+
+Destroy bucket if neede
+
+```bash
+terraform destroy
 ```
