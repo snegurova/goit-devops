@@ -33,7 +33,7 @@ Apply changes to create bucket
 terraform apply
 ```
 
-Destroy bucket if neede
+Destroy bucket if needed
 
 ```bash
 terraform destroy
@@ -61,13 +61,13 @@ Check planned changes
 terraform plan
 ```
 
-Apply changes to create bucket
+Apply changes to create resources
 
 ```bash
 terraform apply
 ```
 
-Destroy bucket if neede
+Destroy resources if needed
 
 ```bash
 terraform destroy
