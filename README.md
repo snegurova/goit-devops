@@ -9,7 +9,7 @@ private subnets, and an ECR repository for container images with scan on push.
 ## 📘 Project Structure
 
 ```
-lesson-5/
+lesson-7/
 │
 ├── main.tf             # Connects all modules
 ├── backend.tf          # Terraform backend configuration (S3)
@@ -65,7 +65,7 @@ export AWS_PROFILE=
 Move to project dir
 
 ```bash
-cd lesson-5
+cd lesson-7
 ```
 
 ---
@@ -156,7 +156,7 @@ This module creates a private ECR repository:
 
 ## Manage project
 
-Initialize project (make sure you are in the lesson-5)
+Initialize project (make sure you are in the lesson-7)
 
 ```bash
 terraform init
