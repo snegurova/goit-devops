@@ -20,7 +20,7 @@ module "eks" {
   source        = "./modules/eks"
   cluster_name  = "eks-cluster-demo"
   subnet_ids    = module.vpc.public_subnets
-  instance_type = "t3.small"
+  instance_type = "t3.medium"
   desired_size  = 2
   max_size      = 4
   min_size      = 2
