@@ -182,6 +182,66 @@ terraform destroy
 
 ---
 
+## 🐍 Django App Create image for django app and push it to ECR
+
+```bash
+docker buildx create --name eksbuilder --use
+docker buildx inspect --bootstrap
+
+docker buildx build \
+  --platform linux/amd64 \
+  -t <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/<REPOSITORY_NAME>:<TAG> \
+  <PATH_TO_DOCKERFILE> \
+```
+
+Login to AWS:
+
+```bash
+aws ecr get-login-password --region <AWS_REGION> | docker login --username AWS --password-stdin <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com
+```
+
+Push image to ECR:
+
+```bash
+docker push <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/<REPOSITORY_NAME>:<TAG>
+```
+
+---
+
+## Update cluster config
+
+aws eks update-kubeconfig \
+ --region us-east-1 \
+ --name <CLUSTER_NAME> \
+ --profile $AWS_PROFILE
+
+---
+
+## Helm
+
+```bash
+helm install lesson7-django-app ./charts/django-app
+helm upgrade lesson7-django-app ./charts/django-app
+helm upgrade lesson7-django-app ./charts/django-app --force-conflicts
+```
+
+---
+
+## Delete resources
+
+```bash
+aws ecr batch-delete-image \
+  --repository-name lesson-7-ecr \
+  --region us-east-1 \
+  --image-ids imageTag=latest
+
+helm uninstall lesson7-django-app
+
+terraform destroy
+```
+
+---
+
 ## ✅ Summary
 
 This Terraform project demonstrates:
