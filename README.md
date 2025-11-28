@@ -9,7 +9,7 @@ private subnets, and an ECR repository for container images with scan on push.
 ## 📘 Project Structure
 
 ```
-lesson-7/
+lesson-9/
 │
 ├── main.tf             # Connects all modules
 ├── backend.tf          # Terraform backend configuration (S3)
@@ -65,7 +65,7 @@ export AWS_PROFILE=
 Move to project dir
 
 ```bash
-cd lesson-7
+cd lesson-9
 ```
 
 ---
@@ -156,7 +156,7 @@ This module creates a private ECR repository:
 
 ## Manage project
 
-Initialize project (make sure you are in the lesson-7)
+Initialize project (make sure you are in the 9)
 
 ```bash
 terraform init
@@ -231,7 +231,7 @@ helm upgrade lesson7-django-app ./charts/django-app --force-conflicts
 
 ```bash
 aws ecr batch-delete-image \
-  --repository-name lesson-7-ecr \
+  --repository-name lesson-9-ecr \
   --region us-east-1 \
   --image-ids imageTag=latest
 
