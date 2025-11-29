@@ -227,6 +227,18 @@ helm upgrade lesson7-django-app ./charts/django-app --force-conflicts
 
 ---
 
+## Jenkins
+
+```bash
+kubectl get svc -n jenkins
+```
+
+Log in to Jenkins
+
+http://<EXTERNAL-IP>
+
+---
+
 ## Delete resources
 
 ```bash
