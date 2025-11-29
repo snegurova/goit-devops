@@ -237,6 +237,8 @@ Log in to Jenkins
 
 http://<EXTERNAL-IP>
 
+Create and run job in Jenkins UI
+
 ---
 
 ## Delete resources

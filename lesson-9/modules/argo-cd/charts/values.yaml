@@ -1,0 +1,28 @@
+applications:
+  - name: example-app
+    namespace: default
+    project: default
+    source:
+      repoURL: 'https://github.com/snegurova/goit-devops.git'
+      path: charts/django-app
+      targetRevision: lesson-9
+      helm:
+        valueFiles:
+          - values.yaml
+    destination:
+      server: 'https://kubernetes.default.svc'
+      namespace: default
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+
+repositories:
+  - name: goit-devops-django-app
+    url: 'https://github.com/snegurova/goit-devops.git'
+    username: snegurova
+    password:
+
+repoConfig:
+  insecure: 'true'
+  enableLfs: 'true'
