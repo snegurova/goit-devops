@@ -241,6 +241,10 @@ Create and run job in Jenkins UI
 
 ---
 
+## DB
+
+## Added possibility to use Aorora or RDS with param `use_aurora`
+
 ## Delete resources
 
 ```bash
