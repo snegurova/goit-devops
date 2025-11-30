@@ -63,7 +63,7 @@ JCasC:
                         remote {
                           url("https://github.com/snegurova/goit-devops.git")
                         }
-                        branches("*/lesson-9")
+                        branches("*/lesson-10")
                       }
                     }
                     scriptPath("django/Jenkinsfile")

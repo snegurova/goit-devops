@@ -9,7 +9,7 @@ private subnets, and an ECR repository for container images with scan on push.
 ## 📘 Project Structure
 
 ```
-lesson-9/
+lesson-10/
 │
 ├── main.tf             # Connects all modules
 ├── backend.tf          # Terraform backend configuration (S3)
@@ -65,7 +65,7 @@ export AWS_PROFILE=
 Move to project dir
 
 ```bash
-cd lesson-9
+cd lesson-10
 ```
 
 ---
@@ -245,7 +245,7 @@ Create and run job in Jenkins UI
 
 ```bash
 aws ecr batch-delete-image \
-  --repository-name lesson-9-ecr \
+  --repository-name lesson-10-ecr \
   --region us-east-1 \
   --image-ids imageTag=latest
 
