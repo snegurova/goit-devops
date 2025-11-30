@@ -12,7 +12,7 @@ ingress:
 
 config:
   POSTGRES_PORT: 5432
-  POSTGRES_HOST: demo-app-db.clqai42ow86h.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: demo-app-db.hfkdi4omr78h.us-east-1.rds.amazonaws.com
   POSTGRES_USER: django_user
   POSTGRES_DB: django_db
   POSTGRES_PASSWORD: pass9764gd

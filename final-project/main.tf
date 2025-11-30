@@ -110,3 +110,8 @@ module "rds" {
     Project     = "demo-app-db"
   }
 }
+
+module "monitoring" {
+  source    = "./modules/monitoring"
+  namespace = "monitoring"
+}

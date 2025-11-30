@@ -243,7 +243,19 @@ Create and run job in Jenkins UI
 
 ## DB
 
-## Added possibility to use Aorora or RDS with param `use_aurora`
+Added possibility to use Aorora or RDS with param `use_aurora`
+
+---
+
+## Monitoring
+
+Forward port to check monitoring metrics on dashboard locally
+
+```bash
+kubectl port-forward svc/grafana 3000:80 -n monitoring
+```
+
+---
 
 ## Delete resources
 
